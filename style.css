@@ -2,7 +2,8 @@
   --bg-color: #333;
   --secondary-bg-color: #444;
   --text-color: #fefefe;
-  --main-color: #BADA55
+  --main-color: #581c87;
+  --secondary-color: #c084fc;
 }
 
 body {
@@ -10,4 +11,20 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 2fr 1fr;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+}
+.container > * {
+  border: solid red;
+}
+
+.header {
 }
