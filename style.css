@@ -2,8 +2,10 @@
   --bg-color: #333;
   --secondary-bg-color: #444;
   --text-color: #fefefe;
-  --main-color: #581c87;
-  --secondary-color: #c084fc;
+  --first-color: #6153CC;
+  --second-color: #1B98E0;
+  --third-color: #0AD3FF;
+  --fourth-color: #5BBA6F;
 }
 
 body {
@@ -22,10 +24,6 @@ body {
   height: 100%;
   width: 100%;
   gap: 10px;
-}
-
-.container > * {
-  border: solid red;
 }
 
 .header {
@@ -103,14 +101,15 @@ body {
   grid-template: 1fr / repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  margin-right: 100px;
+  margin: 0px 20%;
 }
 
 .media > button {
   height: 40px;
   width: 100px;
-  border: solid var(--main-color);
+  background-color:  var(--fourth-color);
   border-radius: 20px;
+  border: solid var(--fourth-color);
 }
 
 .left-sidebar {
@@ -123,6 +122,7 @@ body {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  background-color: var(--fourth-color);
 }
 
 #logo {
@@ -150,16 +150,22 @@ body {
   grid-column: 2 / 3;
   display: grid;
   grid-template: 1fr 3fr 3fr 3fr / 1fr 1fr;
+  gap: 16px;
 }
 
 .content > div {
-  border: solid blue;
 }
 
 .content > h2 {
   grid-area: 1;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+}
+
+.card {
+  border-left: solid 5px var(--first-color);
+  border-radius: 10px;
+  box-shadow: 4px 3px var(--secondary-bg-color);
 }
 
 .card:nth-child(2) {
@@ -201,4 +207,48 @@ body {
 .right-sidebar {
   grid-row: 2 / 3;
   grid-column: 3 / 4;
+}
+
+.card * {
+  margin: 0px 20px;
+}
+
+.card h2 {
+  margin-top: 40px;
+}
+
+.right-sidebar {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+}
+
+.trending {
+  display: grid;
+  grid-template: repeat(4, 1fr) / 1fr;
+  align-items: center;
+  justify-items: start;
+}
+
+.trends {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 4fr;
+  gap: 16px;
+}
+
+.trends > img {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+.trends > p:nth-child(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  margin: 0px;
+  align-self: end;
+}
+
+.trends > p:nth-child(3) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  margin: 0px;
 }
